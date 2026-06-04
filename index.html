@@ -2,146 +2,261 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For You 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Gouga ❤️</title>
 
 <style>
-/* 🌈 animated glowing background */
-body {
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background: linear-gradient(-45deg, #ff4d6d, #ff8fa3, #7bdff2, #b2f7ef);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+overflow:hidden;
+font-family:Arial,sans-serif;
+height:100vh;
+background:linear-gradient(-45deg,#ff4d6d,#ff8fa3,#ff5d8f,#ffc2d1);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:white;
 }
 
-@keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
-/* 💖 glowing card */
-.card {
-  width: 85%;
-  max-width: 850px;
-  text-align: center;
-  z-index: 2;
-  padding: 20px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 30px rgba(255,255,255,0.3);
-  animation: fadeIn 2s ease;
+.gouga{
+position:absolute;
+font-size:70px;
+opacity:.08;
+font-weight:bold;
+color:white;
+pointer-events:none;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
+.card{
+position:relative;
+z-index:10;
+width:90%;
+max-width:900px;
+margin:30px auto;
+padding:20px;
+border-radius:25px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(255,255,255,.3);
+text-align:center;
+max-height:85vh;
+overflow:auto;
 }
 
-h1 {
-  font-size: 38px;
-  text-shadow: 0 0 20px white;
-  animation: glow 2s infinite alternate;
+img{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid white;
+box-shadow:0 0 30px pink;
 }
 
-@keyframes glow {
-  from {text-shadow: 0 0 10px white;}
-  to {text-shadow: 0 0 25px #fff, 0 0 40px #ffb3c1;}
+h1{
+margin:15px;
+font-size:40px;
+animation:pulse 2s infinite;
 }
 
-#text {
-  font-size: 18px;
-  line-height: 1.9;
-  white-space: pre-wrap;
+@keyframes pulse{
+50%{transform:scale(1.08)}
 }
 
-/* 💖 hearts */
-.heart, .star {
-  position: absolute;
-  animation: floatUp 6s linear infinite;
-  opacity: 0.8;
+#text{
+white-space:pre-wrap;
+line-height:1.8;
+font-size:18px;
 }
 
-@keyframes floatUp {
-  from {transform: translateY(100vh) scale(1);}
-  to {transform: translateY(-10vh) scale(0.5);}
+.heart,.spark{
+position:absolute;
+animation:float 8s linear infinite;
 }
 
-.star {
-  color: yellow;
+@keyframes float{
+from{transform:translateY(100vh)}
+to{transform:translateY(-10vh)}
+}
+
+button{
+padding:12px 24px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+margin:15px;
 }
 </style>
 </head>
-
 <body>
 
+<div class="gouga" style="top:5%;left:5%">GOUGA</div>
+<div class="gouga" style="top:25%;right:5%">GOUGA</div>
+<div class="gouga" style="bottom:10%;left:20%">GOUGA</div>
+
 <div class="card">
-  <h1>🤍 For You 🤍</h1>
-  <div id="text"></div>
+<img src="gouga.jpg" alt="Gouga">
+
+<h1>❤️ For Gouga ❤️</h1>
+
+<button onclick="startLove()">💖 Open My Heart 💖</button>
+
+<div id="text"></div>
 </div>
 
-<!-- 🎶 MUSIC -->
-<audio autoplay loop>
-  <source src="echoes.mp3" type="audio/mpeg">
+<audio id="music" loop>
+<source src="echoes.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 
-/* 💌 YOUR MESSAGE */
-const message = `He4a mssg mo5talif chway 🥹 fekra jdida 🤍 nchllh te3jbek 🙏🏻
-L7asilou , twa7chtk barcha gouga 🥹❤️‍🩹 berrasmy twa7chtek 💔 kol sab7a nfi9 nsalli w ned3ilek 🤲🏻🥹
-t3addet sayé gouga 🥹 enfin kamlna 🥺 ma3dch fam stress w fi9an sbe7 bekri 🤍 m3dch fam tnarviz w 5ouf 🥰 
-kamlna c bon ❤️‍🩹 taw 3andek 7a9 terte7y gougty 🩵 taw 3andek 7a9 tetfarhdi 🫶🏻 taw 3andek 7a9 ta9ri mssgy w enty marte7a 😂 
-Manich bech nes2lk ch3malty fi les examens , just n9ollek ki l3eda raw 3andi fik thi9a ❤️‍🩹 w nej7a bi 7awl allh 💖 
-A5tana mn lbac taw 🥹 ye tofla wllh 5allity blasa jem3a kemla 💔 wllh twa7chtek 3ll5er 🥺
-taw normalement nwalli najem na7ki m3k fi ay wa9t 🥹 w le ena ne5tafi le enty te5tafi 👌🏻
-chou gougty aham 7eja taw tarte7y ❤️‍🩹 w tansi lbac w mat5ami fi chay 🥹 kol chay t3adda taw 🤍
-tfarhdi m3a s7abek w m3a l3ayla w khw ❤️ 
-Ossoss haw m3k dima 🥺 mohemty m3k mawfetch gougty 🫶🏻 fiblk ki kamlty lbac ttrte7y mny ? 🥹 
-o4herlek hhhh mzl machrou3na mawfech raw 🙄 w ena 9oltk allemagne ye nemchoulha se9y sa9ek ye manich mechi 🥹
-ena dima ned3i bech rabby yektblna nhar heka 🥺 w nchllh 3la 9rib 🥹❤️‍🩹 manich tanochrek lmarra 🥹
-just n9ollek n7ebk barcha gougty 💖 3em ma7lh t3adda m3k 🥺 ken netlago taw yomken nabda nebki 🤧
-wllh 3la 9ad mafra7t elli kamlty 3la 9ad manet4aker ak les souvenirs lkol li 3malnehom 🥹🥹🥹 he4a beb w sakerneh taw 🥺
-3em l tari5 m3k enty m3dch bech yet3awd jemla ❤️‍🩹 3echt l bac m3k marra o5ra 🥹 bkit m3k w 47akt m3k 🤧🤧 wllh le l9it klem ... 😭
-N7ebek barcha gouga ❤️ merci wllh , bech nab9a dima n7ebek❤️❤️❤️ manich tan5allik ye gouga ❤️‍🩹 
-Ossoss m3kk ,bech tab9a jomla he4y m3k dima 🙏🏻 kima awl nhar , nafs rou7 w nafs l 7ames bech na7ki m3k 🥹
-kima lfar7a ki jawbtiny awl marra kima lfar7a ki nekteblek taw a5er mssg teb3 lbac 😭😭 yeeeeee m3dch najm noskt 5ir 😭 
-Khw ay ken nzid chway taw tekl b3a4ha ..🥹`;
+const message = `
 
-/* ✍️ TYPEWRITER */
-let i = 0;
-function typeWriter() {
-  if (i < message.length) {
-    document.getElementById("text").innerHTML += message.charAt(i);
-    i++;
-    setTimeout(typeWriter, 20);
-  }
+He4a mssg mo5talif chway 🥹
+fekra jdida 🤍
+nchllh te3jbek 🙏🏻
+
+L7asilou, twa7chtk barcha gouga 🥹❤️‍🩹
+berrasmy twa7chtek 💔
+kol sab7a nfi9 nsalli w ned3ilek 🤲🏻🥹
+
+t3addet sayé gouga 🥹
+enfin kamlna 🥺
+ma3dch fam stress w fi9an sbe7 bekri 🤍
+m3dch fam tnarviz w 5ouf 🥰
+kamlna c bon ❤️‍🩹
+
+taw 3andek 7a9 terte7y gougty 🩵
+taw 3andek 7a9 tetfarhdi 🫶🏻
+taw 3andek 7a9 ta9ri mssgy w enty marte7a 😂
+
+Manich bech nes2lk ch3malty fi les examens,
+just n9ollek ki l3eda raw 3andi fik thi9a ❤️‍🩹
+w nej7a bi 7awl allh 💖
+
+A5tana mn lbac taw 🥹
+ye tofla wllh 5allity blasa jem3a kemla 💔
+wllh twa7chtek 3ll5er 🥺
+
+taw normalement nwalli najem na7ki m3k fi ay wa9t 🥹
+w le ena ne5tafi le enty te5tafi 👌🏻
+
+chou gougty aham 7eja taw tarte7y ❤️‍🩹
+w tansi lbac w mat5ami fi chay 🥹
+kol chay t3adda taw 🤍
+
+tfarhdi m3a s7abek
+w m3a l3ayla w khw ❤️
+
+Ossoss haw m3k dima 🥺
+mohemty m3k mawfetch gougty 🫶🏻
+
+fiblk ki kamlty lbac ttrte7y mny ? 🥹
+yo4herlek hhhh 😭
+
+mzl machrou3na mawfech raw 🙄
+
+w ena 9oltk allemagne
+ye nemchoulha se9y sa9ek
+ye manich mechi 🥹
+
+ena dima ned3i bech rabby yektblna nhar heka 🥺
+w nchllh 3la 9rib 🥹❤️‍🩹
+
+manich tanochrek lmarra 🥹
+just n9ollek n7ebk barcha gougty 💖
+
+3em ma7lh t3adda m3k 🥺
+
+ken netlago taw yomken nabda nebki 🤧
+
+wllh 3la 9ad mafra7t elli kamlty
+3la 9ad manet4aker les souvenirs lkol li 3malnehom 🥹🥹🥹
+
+he4a beb w sakerneh taw 🥺
+
+3em l tari5 m3k enty
+m3dch bech yet3awd jemla ❤️‍🩹
+
+3echt l bac m3k marra o5ra 🥹
+
+bkit m3k
+w 47akt m3k 🤧🤧
+
+wllh le l9it klem ... 😭
+
+N7ebek barcha gouga ❤️
+
+merci wllh 🥹
+bech nab9a dima n7ebek ❤️❤️❤️
+
+manich tan5allik ye gouga ❤️‍🩹
+
+Ossoss m3kk,
+bech tab9a jomla he4y m3k dima 🙏🏻
+
+kima awl nhar,
+nafs rou7
+w nafs l 7ames bech na7ki m3k 🥹
+
+kima lfar7a ki jawbtiny awl marra
+kima lfar7a ki nekteblek taw
+a5er mssg teb3 lbac 😭😭
+
+yeeeeee
+m3dch najm noskt 5ir 😭
+
+Khw ay ken nzid chway
+taw tekl b3a4ha .. 🥹
+
+N7ebek barcha gouga ❤️🤍❤️
+
+`;
+
+function startLove(){
+document.getElementById('music').play();
+
+let i=0;
+const target=document.getElementById('text');
+target.innerHTML='';
+
+function type(){
+if(i<message.length){
+target.innerHTML+=message.charAt(i);
+i++;
+setTimeout(type,20);
 }
-typeWriter();
-
-/* 💖 hearts + ⭐ stars */
-function createElement(type) {
-  const el = document.createElement("div");
-  el.classList.add(type);
-  el.innerHTML = type === "heart" ? "❤️" : "✨";
-  el.style.left = Math.random() * 100 + "vw";
-  el.style.fontSize = (Math.random() * 20 + 10) + "px";
-  document.body.appendChild(el);
-
-  setTimeout(() => el.remove(), 6000);
+}
+type();
 }
 
-setInterval(() => createElement("heart"), 200);
-setInterval(() => createElement("star"), 400);
+function heart(){
+const h=document.createElement('div');
+h.className='heart';
+h.innerHTML='❤️';
+h.style.left=Math.random()*100+'vw';
+h.style.fontSize=(20+Math.random()*30)+'px';
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),8000);
+}
+
+function spark(){
+const s=document.createElement('div');
+s.className='spark';
+s.innerHTML='✨';
+s.style.left=Math.random()*100+'vw';
+document.body.appendChild(s);
+setTimeout(()=>s.remove(),8000);
+}
+
+setInterval(heart,180);
+setInterval(spark,400);
 
 </script>
-
 </body>
 </html>
