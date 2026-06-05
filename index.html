@@ -91,7 +91,7 @@ font-size:18px;
 cursor:pointer;
 margin:15px;
 }
-buttons{
+.buttons{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
@@ -118,14 +118,20 @@ text-shadow:0 0 10px pink;
 <img src="gouga.png" alt="Gouga">
 
 <h1>❤️ For Gouga ❤️</h1>
+<p style="font-size:22px;margin-bottom:15px;">
+✨ 3aalem sa8ir lik enty khw gougty ✨
+</p>
 
 <button onclick="startLove()">💖 7elli surprise ayy 💖</button>
 <div class="buttons">
-<button onclick="makeSmile()">😂 Make Me Smile</button>
-<button onclick="missYou()">🥺 Miss You Meter</button>
-<button onclick="heartExplosion()">❤️ Heart Explosion</button>
+<button onclick="makeSmile()">😂 l7asilou...</button>
+<button onclick="missYou()">🥺 ena 9adech twa7chtk </button>
+<button onclick="heartExplosion()">❤️ barcha 9loub</button>
 <button onclick="surpriseMe()">✨ Surprise Me</button>
 <button onclick="germanyPlan()">🇩🇪 Germany Plan</button>
+<button onclick="memoryBox()">📦 4ekrayet</button>
+<button onclick="secretLetter()">🔒 risela serriya</button>
+<button onclick="finalSurprise()">🎆 a5er mmoufaj2a</button>
 </div>
 
 <p id="funText"></p>
@@ -309,7 +315,7 @@ const msgs=[
 "🥹 Twa7chtk barcha",
 "❤️ Ossoss m3ak dima",
 "✨ Machrou3na mazél mawfech",
-"🤍 Rabi y7afdhik"
+"🤍 Rabi ya7fdhik"
 ];
 
 document.getElementById("funText").innerHTML =
@@ -319,6 +325,32 @@ msgs[Math.floor(Math.random()*msgs.length)];
 function germanyPlan(){
 document.getElementById("funText").innerHTML =
 "🇩🇪 Allemagne? ye nemchoulha se9y sa9ek ye manich mechi 😭❤️";
+}
+function memoryBox(){
+const memories=[
+"🥹 awl message ",
+"❤️ awl 4a7ka",
+"😭 4ekreyet lbac",
+"machrou3na",
+"💌 ay mssg menek i5alliny na47ek wa7dy"
+];
+
+document.getElementById("funText").innerHTML =
+memories[Math.floor(Math.random()*memories.length)];
+}
+
+function secretLetter(){
+document.getElementById("funText").innerHTML =
+"💌 Gouga... belli isir,ena far7an barcha elli 3raftek w d5alty 7yety ye rou7y❤️";
+}
+
+function finalSurprise(){
+document.getElementById("funText").innerHTML =
+"🥹❤️ N7ebek barcha Gouga ❤️🥹";
+
+for(let j=0;j<3;j++){
+heartExplosion();
+}
 }
 setInterval(heart,180);
 setInterval(spark,400);
