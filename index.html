@@ -106,6 +106,17 @@ margin:15px;
 color:#fff;
 text-shadow:0 0 10px pink;
 }
+button{
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 15px pink;
+}
+.night{
+  background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e);
+}
 </style>
 </head>
 <body>
@@ -126,6 +137,8 @@ text-shadow:0 0 10px pink;
 <div class="buttons">
 <button onclick="makeSmile()">😂 l7asilou...</button>
 <button onclick="missYou()">🥺 ena 9adech twa7chtk </button>
+<button onclick="toggleMusic()">🎵 music</button>
+<button onclick="toggleNight()">🌙 night</button>
 <button onclick="heartExplosion()">❤️ barcha 9loub</button>
 <button onclick="surpriseMe()">✨ Surprise Me</button>
 <button onclick="germanyPlan()">🇩🇪 Germany Plan</button>
@@ -354,7 +367,37 @@ heartExplosion();
 }
 setInterval(heart,180);
 setInterval(spark,400);
+let musicPlaying = false;
 
+function toggleMusic(){
+  const music = document.getElementById("music");
+
+  if(!musicPlaying){
+    music.play();
+    musicPlaying = true;
+  } else {
+    music.pause();
+    musicPlaying = false;
+  }
+}
+
+function toggleNight(){
+  document.body.classList.toggle("night");
+}
+function confetti(){
+  for(let i=0;i<40;i++){
+    const c=document.createElement("div");
+    c.innerHTML=["💖","✨","💗","💞"][Math.floor(Math.random()*4)];
+    c.style.position="fixed";
+    c.style.left=Math.random()*100+"vw";
+    c.style.top="-10vh";
+    c.style.fontSize=(15+Math.random()*25)+"px";
+    document.body.appendChild(c);
+
+    setTimeout(()=>c.style.top="110vh",50);
+    setTimeout(()=>c.remove(),3000);
+  }
+}
 </script>
 </body>
 </html>
