@@ -46,6 +46,7 @@ box-shadow:0 0 30px rgba(255,255,255,.3);
 text-align:center;
 max-height:85vh;
 overflow:auto;
+animation:intro 1.5s ease;
 }
 
 img{
@@ -55,6 +56,7 @@ object-fit:cover;
 border-radius:50%;
 border:5px solid white;
 box-shadow:0 0 30px pink;
+animation:photoEntry 2s ease;
 }
 
 h1{
@@ -117,6 +119,16 @@ button:hover{
 .night{
   background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e);
 }
+@keyframes intro{
+  from{
+    opacity:0;
+    transform:translateY(30px) scale(0.9);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
 </style>
 </head>
 <body>
@@ -132,6 +144,7 @@ button:hover{
 <p style="font-size:22px;margin-bottom:15px;">
 ✨ 3aalem sa8ir lik enty khw gougty ✨
 </p>
+<p id="daysCounter" style="font-size:20px;margin:10px 0;font-weight:bold;"></p>
 
 <button onclick="startLove()">💖 7elli surprise ayy 💖</button>
 <div class="buttons">
@@ -397,7 +410,25 @@ function confetti(){
     setTimeout(()=>c.style.top="110vh",50);
     setTimeout(()=>c.remove(),3000);
   }
+@keyframes photoEntry{
+  from{
+    opacity:0;
+    transform:scale(0.5) rotate(-10deg);
+  }
+  to{
+    opacity:1;
+    transform:scale(1) rotate(0deg);
+  }
 }
+const startDate = new Date("2025-07-03"); 
+const today = new Date();
+
+const diff = Math.floor(
+  (today - startDate) / (1000 * 60 * 60 * 24)
+);
+
+document.getElementById("daysCounter").innerHTML =
+`❤️ ${diff} jours ensemble ❤️`;
 </script>
 </body>
 </html>
